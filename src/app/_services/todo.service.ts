@@ -1,10 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, Subject, Subscriber } from 'rxjs';
-import { Todo } from '../_models/class/todo';
 import { ITodo } from '../_models/interface/itodo';
-import { IGetTodos } from '../_models/interface/iget-todos';
-
 @Injectable({
   providedIn: 'root',
 })

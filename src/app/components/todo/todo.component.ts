@@ -3,8 +3,6 @@ import { Todo } from 'src/app/_models/class/todo';
 import { ITodo } from 'src/app/_models/interface/itodo';
 import { ITodoEventEmitter } from 'src/app/_models/interface/itodo-event-emitter';
 import { TodoService } from 'src/app/_services/todo.service';
-import { IGetTodos } from '../../_models/interface/iget-todos';
-
 @Component({
   selector: 'app-todo',
   templateUrl: './todo.component.html',
@@ -57,17 +55,10 @@ export class TodoComponent implements OnInit {
     if (event.action == 'toggle') {
       if (!event.object.isCompleted) {
         event.object.isCompleted = true;
-        console.log(event.object.status);
         this._TodoService.put(event.object);
-        console.log(event.object);
-        /*         this.finishedTodos.splice(this.finishedTodos.indexOf(event.object, 1));
-        this.todos.push(event.object); */
       } else {
         event.object.isCompleted = false;
         this._TodoService.put(event.object);
-        console.log(event.object);
-        /*         this.todos.splice(this.finishedTodos.indexOf(event.object, 1));
-        this.finishedTodos.push(event.object); */
       }
     } else if (event.action == 'put') {
       this._TodoService.put(event.object);
@@ -76,16 +67,6 @@ export class TodoComponent implements OnInit {
     }
   }
 
-  /* createNewTodo(text: string) {
-    const newTodo = new Todo(text);
-    this._TodoService.addTodo();
-    id: undefined,
-      label: text,
-      status: false,
-      position: undefined,
-    this.todos.push(newTodo);
-    .console.log(newTodo);
-  } */
   post(text: string) {
     const newTodo = new Todo(text);
     this._TodoService.post(newTodo);
