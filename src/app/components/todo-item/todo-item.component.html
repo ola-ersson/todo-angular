@@ -1,0 +1,31 @@
+<div class="todo-card {{ index }}">
+  <!-- <div class="todo-card {{ index }}"> -->
+  <div>
+    <div class="sort">Sort</div>
+  </div>
+  <input
+    *ngIf="editValue"
+    type="text"
+    style="text-transform: uppercase"
+    #inputText
+    (keyup)="onKeyUp(inputText.value)"
+    (keyup.enter)="putTodo()"
+    [value]="todo$.label"
+  />
+  <div [ngClass]="{ completed: isCompleted }" *ngIf="!editValue">
+    {{ todo$.label }}
+  </div>
+  <div class="action-btn-wrapper">
+    <button class="edit" *ngIf="!editValue" (click)="edit()">EDIT</button>
+    <button class="edit" *ngIf="editValue" (click)="putTodo()">SAVE</button>
+    <div class="check">
+      <mat-checkbox
+        (change)="toggleStatus()"
+        [checked]="todo$.status"
+      ></mat-checkbox>
+    </div>
+    <div class="delete">
+      <mat-icon class="clear-icon" (click)="deleteTodo()">delete</mat-icon>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,13 @@
+div {
+  display: flex;
+  min-height: 70vh;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+p {
+  font-family: roboto;
+  font-size: 3rem;
+  color: white;
+}

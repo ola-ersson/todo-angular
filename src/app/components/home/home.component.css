@@ -1,0 +1,22 @@
+div {
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #424242;
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+button {
+  height: 48px;
+  font-size: 2rem;
+  margin-top: 1rem;
+  /* color: lightgreen; */
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}

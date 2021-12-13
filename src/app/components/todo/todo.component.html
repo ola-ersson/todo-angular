@@ -1,0 +1,37 @@
+<div class="todo-wrapper">
+  <form>
+    <mat-form-field class="new-todo" appearance="outline">
+      <mat-label>New To-Do</mat-label>
+      <input
+        matInput
+        type="text"
+        #todoInput
+        (keyup.enter)="post(todoInput.value)"
+        autofocus
+      />
+    </mat-form-field>
+    <button type="button" class="add" (click)="post(todoInput.value)">
+      ADD
+    </button>
+  </form>
+  <button type="button" class="todo-show" (click)="toggleShowTodos()">
+    {{ todosLabel }} <span>( {{ todos.length }} )</span>
+  </button>
+  <div *ngIf="todosShow" class="todo-item-wrapper">
+    <app-todo-item
+      *ngFor="let t of todos"
+      [todo$]="t"
+      (todoEventEmitter)="updateList($event)"
+    ></app-todo-item>
+  </div>
+  <button type="button" class="todo-show" (click)="toggleFinishedTodos()">
+    {{ finishedTodosLabel }} <span>( {{ finishedTodos.length }} )</span>
+  </button>
+  <div *ngIf="finishedTodosShow">
+    <app-todo-item
+      *ngFor="let f of finishedTodos"
+      [todo$]="f"
+      (todoEventEmitter)="updateList($event)"
+    ></app-todo-item>
+  </div>
+</div>

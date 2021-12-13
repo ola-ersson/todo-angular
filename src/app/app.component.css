@@ -1,0 +1,39 @@
+header {
+  height: 15vh;
+  background-color: #424242;
+  border-bottom: 0.2rem solid white;
+  display: flex;
+  font-size: 8vh;
+  font-weight: 900;
+  color: white;
+  text-shadow: 2px 2px 2px black;
+}
+div {
+  margin: auto;
+  text-transform: uppercase;
+  text-shadow: 0px 0px 5px lightgreen;
+}
+
+main {
+  max-width: 1440px;
+  min-height: 70vh;
+  background: lightgreen;
+  margin: auto;
+}
+
+app-todo {
+  display: flex;
+  flex-flow: column;
+  padding: 10px;
+  background: pink;
+}
+
+app-todo-item {
+  margin-top: 1rem;
+}
+
+footer {
+  height: 15vh;
+  background-color: #424242;
+  border-top: 0.2rem solid white;
+}

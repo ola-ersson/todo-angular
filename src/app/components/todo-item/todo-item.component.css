@@ -1,0 +1,55 @@
+.todo-card {
+  display: flex;
+  justify-content: space-between;
+  background: #424242;
+  color: white;
+  margin-top: 0.2rem;
+  height: 3.72rem;
+  align-items: center;
+  padding: 0.5rem;
+  border-radius: 0.28rem;
+  border: 1px solid white;
+  box-shadow: 2px 3px 3px black;
+  text-transform: uppercase;
+}
+
+.sort {
+  border: 2px dotted lightgreen;
+  padding: 0.5rem;
+}
+.action-btn-wrapper {
+  display: flex;
+}
+.edit {
+  margin-right: 1rem;
+  cursor: pointer;
+}
+.check {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-right: 1rem;
+}
+
+/* .mat-card {
+  margin-top: 0.2rem;
+} */
+
+.delete {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+/* #mat-checkbox-2 {
+  
+} */
+.clear-icon {
+  color: pink;
+}
+
+.completed {
+  text-decoration: line-through;
+}
